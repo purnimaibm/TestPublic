@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--desc--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" inputOutput="false" manual="true">
+<model-identification modelTag="@Sample @v1 @Sample_Sample @s">
+<model-identification-field name="Application Name" partOfTag="true" value="Sample"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="v1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="Sample_Sample"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="monikaks@in.ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="22 Oct 2020 16:57:33"/>
+<model-identification-field name="Updated By" partOfTag="false" value="monikaks"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="24 Nov 2020 10:58:26"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="s"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="" group="G1" iotype="NEITHER" name="Sample" parentDetailsApplicationName="Sample" parentDetailsFunctionality="Sample" parentDetailsModel="Sample.model" parentDetailsModelTag="@Sample @v1 @Sample_Sample @s" parentDetailsPortfolio="Sample" parentDetailsTenantId="Sample" parentDetailsUsername="monikaks" poolId="4f3826ed777e43b0a53feb79be5c8a5e" revision="1-77e14e87bd5bfe798a07811d969a3f6f" type="STRING">
+<value name="v1" weight="1"/>
+</attribute>
+<negative-combination>
+<attr-value attribute="Sample" value="v1"/>
+</negative-combination>
+<coverage-reqs-sets defaultCoverageRequirementsSet="cr">
+<coverage-reqs-set description="" name="cr">
+<coverage-req>
+<attribute name="Sample"/>
+<coverage-goal coverage-goal-val="1"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet">
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Sample"/>
+</negative-attribute-combination>
+</coverage-req>
+</coverage-reqs-set>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="Sample" parentDetailsFunctionality="Sample" parentDetailsModel="Sample.model" parentDetailsModelTag="@Sample @v1 @Sample_Sample @s" parentDetailsPortfolio="Sample" parentDetailsTenantId="Sample" parentDetailsUsername="monikaks"/>
+<attrs-to-delete/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
