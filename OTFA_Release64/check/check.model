@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--test--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@OTFA_Release64 @v1 @OTFA_Release64_T64 @test">
+<model-identification-field name="Application Name" partOfTag="true" value="OTFA_Release64"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="v1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="OTFA_Release64_T64"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="Vemulapalli.Rishika.Chowdary"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="25 Jun 2021 11:55:16"/>
+<model-identification-field name="Updated By" partOfTag="false" value="Purnima.Hariharakrishnan@ibm.com"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="14 Apr 2022 14:21:43"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="test"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="false"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="descsmp" group="" iotype="NEITHER" name="Smartpay" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release64 @v1 @OTFA_Release64_T64 @test" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="due" neg-value="false" weight="1">
+<requirement ID="Credi.Credited1"/>
+<requirement ID="abc_V1.Req005"/>
+<requirement ID="d2.E2"/>
+</value>
+<value name="tag" neg-value="false" weight="1"/>
+<requirement ID="Credi.Credited1"/>
+<requirement ID="Credit Installments Ph8B -OneView SRS- v1.5.Credit Installments_02"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="updated" group="" iotype="NEITHER" name="Sweetpay" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@OTFA_Release64 @v1 @OTFA_Release64_T64 @test" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="ambiguity_efficient_appropriate_1" neg-value="true" weight="1"/>
+</attribute>
+<requirements-tracking-combination>
+<attr-value attribute="Smartpay" value="due"/>
+<requirement ID="Credi.Credited1"/>
+<requirement ID="abc_V1.Req005"/>
+<requirement ID="d2.E2"/>
+</requirements-tracking-combination>
+<requirements-collection>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="D11" Keywords="" Ranking="0" RequirementDescription="" RequirementId="R123" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="d112" Keywords="" Ranking="0" RequirementDescription="" RequirementId="R1112" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="Credi" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Credited1" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="Test" Keywords="" Ranking="0" RequirementDescription="" RequirementId="req" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Medium" DocumentName="xyz_v2" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req007" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="xyz_v2" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req006" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="abc_V1" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req005" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="xyz_v2" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req009" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="abc_V1" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req004" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="xyz_v2" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req008" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Medium" DocumentName="abc_V1" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req003" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="d2" Keywords="" Ranking="0" RequirementDescription="" RequirementId="E2" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="abc_V1" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req002" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Medium" DocumentName="d1" Keywords="" Ranking="0" RequirementDescription="" RequirementId="E1" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="abc_V1" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Req001" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="Credit Installments Ph8B -OneView SRS- v1.5" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Credit Installments_02" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Complex" DocumentName="test" Keywords="" Ranking="0" RequirementDescription="" RequirementId="test" Restrictions=""/>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="Reg_doc" Keywords="" Ranking="0" RequirementDescription="" RequirementId="Requirement1" Restrictions=""/>
+</requirements-collection>
+<coverage-reqs-sets defaultCoverageRequirementsSet="R1">
+<coverage-reqs-set description="tet" name="R1">
+<coverage-req>
+<attribute name="Smartpay"/>
+<attribute name="Sweetpay"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet"/>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="true">
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="t1" negative="false" suppressNewLine="false" triggerType="Test_Steps">
+<focus-ctd-multiple-template>
+<focus-ctd-multiple-template-testSteps>
+<focus-ctd-template text="s1 &lt;custom_wildcard=123&gt;s1_123&lt;/custom_wildcard&gt;"/>
+<focus-ctd-template text="s2 &lt;custom_wildcard=456&gt;s2_456&lt;/custom_wildcard&gt;"/>
+<focus-ctd-template text="s3 &lt;custom_wildcard=456&gt;s3_456&lt;/custom_wildcard&gt;"/>
+<focus-ctd-template text="Launch log in Page &lt;requirements&gt;"/>
+<focus-ctd-template text="Score from model = &lt;score&gt;"/>
+<focus-ctd-template text="Priority from model is &lt;priority&gt;"/>
+<focus-ctd-template text="Good Bad path wildcard value is &lt;good_bad&gt;"/>
+</focus-ctd-multiple-template-testSteps>
+<focus-ctd-multiple-template-expectedResults>
+<focus-ctd-template text="e1"/>
+<focus-ctd-template text="e2"/>
+<focus-ctd-template text="e3"/>
+<focus-ctd-template text=""/>
+<focus-ctd-template text=""/>
+<focus-ctd-template text=""/>
+<focus-ctd-template text=""/>
+</focus-ctd-multiple-template-expectedResults>
+<focus-ctd-multiple-template-additionalInfo/>
+</focus-ctd-multiple-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="t2" negative="false" suppressNewLine="false" triggerType="Preconditions">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;att_val_desc = Smartpay&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Sweetpay" operation="Equals">
+<focus-ctd-cond-val value="ambiguity_efficient_appropriate_1"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments/>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
