@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--test--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@TestRepo2 @5.20 @TestRepo2_test @test">
+<model-identification-field name="Application Name" partOfTag="true" value="TestRepo2"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="5.20"/>
+<model-identification-field name="Application Function" partOfTag="true" value="TestRepo2_test"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="sheetsin@in.ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="09 Aug 2019 16:06:18"/>
+<model-identification-field name="Updated By" partOfTag="false" value="Madhu.Gowdra@ibm.com"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="28 Apr 2022 10:28:25"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="test"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="Imported from model Rel 5.4_IQP_Regression_Users: Imported from model Rel 5.4_IQP Regression" group="" iotype="NEITHER" name="UserRole" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@TestRepo2 @5.20 @TestRepo2_test @test" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Admin" neg-value="false" weight="1"/>
+<value name="QA" neg-value="false" weight="1"/>
+<value name="Test Manager" neg-value="false" weight="1"/>
+<value name="Test Lead" neg-value="false" weight="1"/>
+<value name="Defect Manager" neg-value="false" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="Imported from model Rel 5.4_IQP_Regression_Users: Imported from model Rel 5.4_IQP Regression" group="" iotype="NEITHER" name="AddUser" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@TestRepo2 @5.20 @TestRepo2_test @test" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="UserName" neg-value="false" weight="1"/>
+<value name="UserEmail" neg-value="false" weight="1"/>
+<value name="UserID" neg-value="false" weight="1"/>
+<value name="Portfolio" neg-value="false" weight="1"/>
+<value name="SearchApplication" neg-value="false" weight="1"/>
+<value name="SelectApplication" neg-value="false" weight="1"/>
+<value name="AddUpdateToolAccess" neg-value="false" weight="1"/>
+<value name="CreateUser" neg-value="false" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="Imported from model Rel 5.4_IQP_Regression_Users: Imported from model Rel 5.4_IQP Regression" group="" iotype="NEITHER" name="EditUser" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@TestRepo2 @5.20 @TestRepo2_test @test" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="SearchUser" neg-value="false" weight="1"/>
+<value name="SelectUser" neg-value="false" weight="1"/>
+<value name="EditDetails" neg-value="false" weight="1"/>
+<value name="SearchApplication" neg-value="false" weight="1"/>
+<value name="SelectApplication" neg-value="false" weight="1"/>
+<value name="AddUpdateToolAccess" neg-value="false" weight="1"/>
+<value name="UpdateUser" neg-value="false" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="Imported from model Rel 5.4_IQP_Regression_Users: Imported from model Rel 5.4_IQP Regression" group="" iotype="NEITHER" name="DeleteUser" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@TestRepo2 @5.20 @TestRepo2_test @test" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="SearchUser" neg-value="false" weight="1"/>
+<value name="SelectUser" neg-value="false" weight="1"/>
+<value name="DeleteUser" neg-value="false" weight="1"/>
+<value name="MsgBoxYesButton" neg-value="false" weight="1"/>
+<value name="MsgBoxCancelButton" neg-value="false" weight="1"/>
+</attribute>
+<coverage-reqs-sets defaultCoverageRequirementsSet="">
+<coverage-reqs-set description="Imported from Rel 5.4_IQP_Regression_Users: Imported from Rel 5.4_IQP Regression" name="IQP Regression_1_1">
+<coverage-req>
+<attribute name="UserRole"/>
+<attribute name="AddUser"/>
+<attribute name="EditUser"/>
+<attribute name="DeleteUser"/>
+<coverage-goal coverage-goal-val="2"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet"/>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="true">
+<focus-ctd-trigger appliance="FIRST_TEST" is_or="false" name="UserMenu" negative="false" suppressNewLine="false" triggerType="Feature">
+<focus-ctd-single-template>
+<focus-ctd-template text="Validate Users Menu"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="To validate user menu." negative="false" suppressNewLine="false" triggerType="Scenario">
+<focus-ctd-single-template>
+<focus-ctd-template text="Scenario to validate users menu from IQP main menu"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Steps to validate users menu" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="navigateTo" additionalInfo="" category="NavigationalCategory" stepType="Given">
+<focus-ctd-template text="I navigate to &quot;(URL)&quot;"/>
+<actionParameter data="&quot;(URL)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[Username]&quot; the value &quot;(Username)&quot;"/>
+<actionParameter data="&quot;[Username]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;(Username)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[Password]&quot; the value &quot;(Password)&quot;"/>
+<actionParameter data="&quot;[Password]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;(Password)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[SignIn]&quot; button"/>
+<actionParameter data="&quot;[SignIn]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="captureScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I take screenshot"/>
+</cucumber-step>
+<cucumber-step actionName="addWaitSeconds" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I add wait seconds of &quot;20&quot;"/>
+<actionParameter data="&quot;20&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="clickLink" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[Menu Bar]&quot; link"/>
+<actionParameter data="&quot;[Menu Bar]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[UsersMenu]&quot; button"/>
+<actionParameter data="&quot;[UsersMenu]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[AddNewUser]&quot; button"/>
+<actionParameter data="&quot;[AddNewUser]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[UserName]&quot; the value &quot;(UserNameToCreate)&quot;"/>
+<actionParameter data="&quot;[UserName]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;(UserNameToCreate)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[EmailID]&quot; the value &quot;(EmailIDToCreate)&quot;"/>
+<actionParameter data="&quot;[EmailID]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;(EmailIDToCreate)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[UserID]&quot; the value &quot;(UserIDToCreate)&quot;"/>
+<actionParameter data="&quot;[UserID]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;(UserIDToCreate)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="selectCheckBox" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I check the checkbox &quot;[Admin]&quot;"/>
+<actionParameter data="&quot;[Admin]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="selectDropDownByPosition" additionalInfo="" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I select from dropdown &quot;[Portfolio]&quot; the item &quot;62&quot;"/>
+<actionParameter data="&quot;[Portfolio]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;62&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[Next]&quot; button"/>
+<actionParameter data="&quot;[Next]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[CreateUser]&quot; button"/>
+<actionParameter data="&quot;[CreateUser]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="TestRepo2" parentDetailsFunctionality="test" parentDetailsModel="CreateUser.model" parentDetailsModelTag="@TestRepo2 @5.20 @TestRepo2_test @test" parentDetailsPortfolio="testprod" parentDetailsTenantId="IQP" parentDetailsUsername="Madhu.Gowdra"/>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments>
+<pool_comment key="95945778-e406-4e33-913b-5fb2919dbe74" value="{&quot;name&quot;:&quot;DeleteUser&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="9cc46e9a-e4ce-4ccd-bd5c-ca27be94cf10" value="{&quot;name&quot;:&quot;AddUser&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="254ddebc-8247-4684-a64d-13edaab9c140" value="{&quot;name&quot;:&quot;UserRole&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="025668aa-8642-459c-97dd-cc86e8e29241" value="{&quot;name&quot;:&quot;EditUser&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+</pool_comments>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
