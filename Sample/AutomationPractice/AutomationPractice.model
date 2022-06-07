@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--Automation Practice--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@Sample @1 @Sample_Sample @Shopping processes">
+<model-identification-field name="Application Name" partOfTag="true" value="Sample"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="Sample_Sample"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="Monica.Lizbeth.Ortiz@ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="02 Jun 2022 19:06:24"/>
+<model-identification-field name="Updated By" partOfTag="false" value="Monica.Lizbeth.Ortiz@ibm.com"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="02 Jun 2022 19:11:58"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="Shopping processes"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value=""/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="false"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="" group="" iotype="NEITHER" name="Email" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @1 @Sample_Sample @Shopping processes" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value name="Valid" neg-value="false" weight="1"/>
+<value name="InValid" neg-value="true" weight="1"/>
+<value name="Blank" neg-value="true" weight="1"/>
+</attribute>
+<negative-combination>
+<attr-value attribute="Email" value="Blank"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Email" value="InValid"/>
+</negative-combination>
+<coverage-reqs-sets defaultCoverageRequirementsSet="CR1">
+<coverage-reqs-set description="" name="CR1">
+<coverage-req>
+<attribute name="Email"/>
+<coverage-goal coverage-goal-val="1"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet">
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Email"/>
+</negative-attribute-combination>
+</coverage-req>
+</coverage-reqs-set>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="Web" decorationType="cucumberDecoration" isActiveDecoration="true">
+<focus-ctd-trigger appliance="FIRST_TEST" is_or="false" name="NewAcc" negative="false" suppressNewLine="false" triggerType="Feature">
+<focus-ctd-single-template>
+<focus-ctd-template text="NewAcc"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Create account with valid email " negative="false" suppressNewLine="false" triggerType="Scenario">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;test_number&gt;"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Create account with invalid email " negative="false" suppressNewLine="false" triggerType="Scenario">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;test_number&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Email" operation="Equals">
+<focus-ctd-cond-val value="InValid"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Create account with blank email value" negative="false" suppressNewLine="false" triggerType="Scenario">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;test_number&gt;"/>
+</focus-ctd-single-template>
+<focus-ctd-cond attribute="Email" operation="Equals">
+<focus-ctd-cond-val value="Blank"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Navigate to the store" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="navigateTo" additionalInfo="" category="NavigationalCategory" stepType="Given">
+<focus-ctd-template text="I navigate to &quot;http://automationpractice.com/index.php?controller=authentication&amp;back=my-account&quot;"/>
+<actionParameter data="&quot;http://automationpractice.com/index.php?controller=authentication&amp;back=my-account&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="captureNewScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I capture screenshot"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Enter Email" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="populateTextField" additionalInfo="~tg~" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[Email]&quot; the value &quot;(Email)&quot;"/>
+<actionParameter data="&quot;[Email]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;(Email)&quot;" dataSource="ExternalData"/>
+</cucumber-step>
+<cucumber-step actionName="captureNewScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I capture screenshot"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+<focus-ctd-cond attribute="Email" operation="Equals">
+<focus-ctd-cond-val value="Valid"/>
+<focus-ctd-cond-val value="InValid"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Click create account button" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[CreateBTN]&quot; button"/>
+<actionParameter data="&quot;[CreateBTN]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="captureNewScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I capture screenshot"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Validate credentials" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="validateElementOnVisibleScreen" additionalInfo="" category="VisualValidationCategory" stepType="Then">
+<focus-ctd-template text="I validate &quot;[CreateAccountText]&quot; present on visible screen"/>
+<actionParameter data="&quot;[CreateAccountText]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="captureNewScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I capture screenshot"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+<focus-ctd-cond attribute="Email" operation="Equals">
+<focus-ctd-cond-val value="Valid"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Invalid credentials" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="validateElementOnVisibleScreen" additionalInfo="" category="VisualValidationCategory" stepType="Then">
+<focus-ctd-template text="I validate &quot;[NoValidAcc]&quot; present on visible screen"/>
+<actionParameter data="&quot;[NoValidAcc]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="captureNewScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I capture screenshot"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+<focus-ctd-cond attribute="Email" operation="Equals">
+<focus-ctd-cond-val value="InValid"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Blank email credentials" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="validateElementOnVisibleScreen" additionalInfo="" category="VisualValidationCategory" stepType="Then">
+<focus-ctd-template text="I validate &quot;[BlankEmailText]&quot; present on visible screen"/>
+<actionParameter data="&quot;[BlankEmailText]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="captureNewScreenshot" additionalInfo="" category="CaptureScreenShotCategory" stepType="And">
+<focus-ctd-template text="I capture screenshot"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+<focus-ctd-cond attribute="Email" operation="Equals">
+<focus-ctd-cond-val value="Blank"/>
+</focus-ctd-cond>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments/>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
