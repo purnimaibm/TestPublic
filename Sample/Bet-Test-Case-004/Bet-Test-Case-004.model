@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE focus-model [
 ]>
-<!--Beginner draft for the BET module--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
-<model-identification modelTag="@Sample @0.1 @Sample_Sample @BET">
+<!--Draft for the BET module--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="true" inputOutput="false" manual="true">
+<model-identification modelTag="@Sample @0.2 @Sample_Sample @BET">
 <model-identification-field name="Application Name" partOfTag="true" value="Sample"/>
-<model-identification-field name="Application code version #" partOfTag="true" value="0.1"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="0.2"/>
 <model-identification-field name="Application Function" partOfTag="true" value="Sample_Sample"/>
-<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="Requirement Change"/>
 <model-identification-field name="Created By" partOfTag="false" value="saed.galaviz@ibm.com"/>
 <model-identification-field name="Created Date and Time" partOfTag="false" value="07 Jun 2022 21:35:01"/>
 <model-identification-field name="Updated By" partOfTag="false" value="saed.galaviz@ibm.com"/>
-<model-identification-field name="Updated Date and Time" partOfTag="false" value="08 Jun 2022 15:36:02"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="08 Jun 2022 17:39:40"/>
 <model-identification-field name="Application Sub Function" partOfTag="true" value="BET"/>
 <model-identification-field name="Test Stage" partOfTag="false" value=""/>
 <model-identification-field name="Criticality" partOfTag="false" value="minor"/>
@@ -20,30 +20,31 @@
 <model-identification-field name="User Story" partOfTag="false" value=""/>
 <model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
 </model-identification>
-<attribute attr_class="NONE" dependencies="false" description="usuario que quiere hacer la consulta de datos" group="" iotype="NEITHER" name="Usuario" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<attribute attr_class="NONE" dependencies="false" description="usuario que quiere hacer la consulta de datos" group="" iotype="NEITHER" name="Usuario" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.2 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
 <value description="The valid user value" name="ValidId" neg-value="false" weight="1"/>
-<value description="An incorrect user value" name="InvalidId" neg-value="true" weight="2"/>
+<value description="An incorrect user value" name="InvalidId" neg-value="true" weight="1"/>
 <value description="No value in user field" name="BlankId" neg-value="true" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="Contraseña definida por el usuario" group="" iotype="NEITHER" name="Password" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<attribute attr_class="NONE" dependencies="false" description="Contraseña definida por el usuario" group="" iotype="NEITHER" name="Password" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.2 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
 <value description="Valor correcto que concorda con el usuario" name="ValidPwd" neg-value="false" weight="1"/>
-<value description="Valor incorrecto que concuerde con el usuario" name="InvalidPwd" neg-value="true" weight="2"/>
+<value description="Valor incorrecto que concuerde con el usuario" name="InvalidPwd" neg-value="true" weight="1"/>
 <value description="Campo de contraseña sin valor" name="BlankPwd" neg-value="true" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="Contraseña dinamica para 2FA" group="" iotype="NEITHER" name="DynamicPwd" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<attribute attr_class="NONE" dependencies="false" description="Contraseña dinamica para 2FA" group="" iotype="NEITHER" name="DynamicPwd" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.2 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
 <value description="Valor valido de DynPwd" name="ValidDynPwd" neg-value="false" weight="1"/>
 <value description="valor invalido para DynPwd" name="InvalidDynPwd" neg-value="true" weight="1"/>
 <value description="campo de DynPwd sin valor" name="BlankDynPwd" neg-value="true" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="fecha valida inicial" group="" iotype="NEITHER" name="ValidFechaInicial" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<attribute attr_class="NONE" dependencies="false" description="fecha valida inicial" group="" iotype="NEITHER" name="ValidFechaInicial" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.2 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
 <value description="una fecha valida para rango incial" name="ValidInitialDate" neg-value="false" weight="1"/>
 <value description="una fecha invalida para rango inicial" name="InvalidInitialDate" neg-value="true" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="fecha final" group="" iotype="NEITHER" name="FinalDate" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<attribute attr_class="NONE" dependencies="false" description="fecha final" group="" iotype="NEITHER" name="FinalDate" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.2 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
 <value description="valor valido de fecha final" name="ValidFinalDate" neg-value="false" weight="1"/>
 <value description="valor invalido para fecha final" name="InvalidFinalDate" neg-value="true" weight="1"/>
+<value name="NA" neg-value="false" weight="1"/>
 </attribute>
-<restriction expression="!(Usuario.equals(&quot;ValidId&quot;) &amp;&amp; Password.equals(&quot;ValidPwd&quot;) &amp;&amp; DynamicPwd.equals(&quot;ValidDynPwd&quot;)) || ValidFechaInicial.equals(&quot;ValidInitialDate&quot;) &amp;&amp; FinalDate.equals(&quot;ValidFinalDate&quot;)" group="" groupedExpression="!(Usuario.equals(&quot;ValidId&quot;) &amp;&amp; Password.equals(&quot;ValidPwd&quot;) &amp;&amp; DynamicPwd.equals(&quot;ValidDynPwd&quot;)) || ValidFechaInicial.equals(&quot;ValidInitialDate&quot;) &amp;&amp; FinalDate.equals(&quot;ValidFinalDate&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<restriction expression="!(Usuario.equals(&quot;ValidId&quot;) &amp;&amp; Password.equals(&quot;ValidPwd&quot;) &amp;&amp; DynamicPwd.equals(&quot;ValidDynPwd&quot;)) || ValidFechaInicial.equals(&quot;ValidInitialDate&quot;) &amp;&amp; (FinalDate.equals(&quot;ValidFinalDate&quot;) || FinalDate.equals(&quot;NA&quot;))" group="" groupedExpression="!(Usuario.equals(&quot;ValidId&quot;) &amp;&amp; Password.equals(&quot;ValidPwd&quot;) &amp;&amp; DynamicPwd.equals(&quot;ValidDynPwd&quot;)) || ValidFechaInicial.equals(&quot;ValidInitialDate&quot;) &amp;&amp; (FinalDate.equals(&quot;ValidFinalDate&quot;) || FinalDate.equals(&quot;NA&quot;))" iff="false" isActive="true" isAutoGenerated="false" name="Valid Login for test case" type="If-Then">
 <if-expr is_or="false">
 <focus-ctd-cond attribute="Usuario" operation="Equals">
 <focus-ctd-cond-val value="ValidId"/>
@@ -61,6 +62,7 @@
 </focus-ctd-cond>
 <focus-ctd-cond attribute="FinalDate" operation="Equals">
 <focus-ctd-cond-val value="ValidFinalDate"/>
+<focus-ctd-cond-val value="NA"/>
 </focus-ctd-cond>
 </then-expr>
 </restriction>
@@ -218,13 +220,18 @@
 <attr-value attribute="Password" value="ValidPwd"/>
 <attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
 </na-mapping-combination>
+<requirements-collection>
+<requirement-node Ambiguity="" Complexity="Simple" DocumentName="Businesrequirement" Keywords="" Ranking="0" RequirementDescription="" RequirementId="sdsdsdsd" Restrictions=""/>
+</requirements-collection>
 <coverage-reqs-sets defaultCoverageRequirementsSet="Sucessfull login">
 <coverage-reqs-set description="Validation of a sucessful login" name="Sucessfull login">
 <coverage-req>
 <attribute name="Usuario"/>
 <attribute name="Password"/>
 <attribute name="DynamicPwd"/>
-<coverage-goal coverage-goal-val="3"/>
+<attribute name="ValidFechaInicial"/>
+<attribute name="FinalDate"/>
+<coverage-goal coverage-goal-val="1"/>
 </coverage-req>
 </coverage-reqs-set>
 </coverage-reqs-sets>
@@ -262,14 +269,114 @@
 </coverage-req>
 </coverage-reqs-set>
 </neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="Web" decorationType="cucumberDecoration" isActiveDecoration="true">
+<focus-ctd-trigger appliance="FIRST_TEST" is_or="false" name="Initial triggers" negative="false" suppressNewLine="false" triggerType="Feature">
+<focus-ctd-single-template>
+<focus-ctd-template text="Initial triggers"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="LoginScenario" negative="false" suppressNewLine="false" triggerType="Scenario">
+<focus-ctd-single-template>
+<focus-ctd-template text="&lt;good_bad&gt;"/>
+</focus-ctd-single-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="AppLaunch" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="navigateTo" additionalInfo="" category="NavigationalCategory" stepType="Given">
+<focus-ctd-template text="I navigate to &quot;https://betlogon.pre.mx.corp/LOGBET_ENS/ChannelDriver.ssobto?dse_operationName=login&amp;dse_parentContextName=&amp;dse_processorState=initial&amp;dse_nextEventName=start&amp;nowCheckingCookies=1522335868441&quot;"/>
+<actionParameter data="&quot;https://betlogon.pre.mx.corp/LOGBET_ENS/ChannelDriver.ssobto?dse_operationName=login&amp;dse_parentContextName=&amp;dse_processorState=initial&amp;dse_nextEventName=start&amp;nowCheckingCookies=1522335868441&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="addWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I add wait seconds of &quot;15&quot;"/>
+<actionParameter data="&quot;15&quot;" dataSource="Literal"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+</focus-ctd-trigger>
+<focus-ctd-trigger appliance="ALWAYS" is_or="false" name="Login" negative="false" suppressNewLine="false" triggerType="Steps">
+<focus-ctd-cucumber-steps-template>
+<cucumber-step actionName="addNewWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I wait for &quot;2&quot; seconds"/>
+<actionParameter data="&quot;2&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="validateElementWithText" additionalInfo="~tg~" category="ValidationCategory" stepType="Then">
+<focus-ctd-template text="&quot;[UserLogin]&quot; should have text as &quot;Código de&quot;"/>
+<actionParameter data="&quot;[UserLogin]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;Código de&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="Xpath=//*[@id=&quot;root-tplSeguridad-seguridadGapBody-inputCodigoCliente&quot;]~tg~" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[User]&quot; the value &quot;52586546&quot;"/>
+<actionParameter data="&quot;[User]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;52586546&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="addNewWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I wait for &quot;2&quot; seconds"/>
+<actionParameter data="&quot;2&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="//*[@id=&quot;root-tplSeguridad-IFooter-forEachButtons-0-boton&quot;]" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[Next]&quot; button"/>
+<actionParameter data="&quot;[Next]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="addNewWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I wait for &quot;1&quot; seconds"/>
+<actionParameter data="&quot;1&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="validateElementWithText" additionalInfo="~tg~" category="ValidationCategory" stepType="And">
+<focus-ctd-template text="&quot;[PwdLogin]&quot; should have text as &quot;Contraseña BE&quot;"/>
+<actionParameter data="&quot;[PwdLogin]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;Contraseña BE&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="Xpath=//*[@id=&quot;root-tplSeguridad-seguridadGapBody-inputContrasena&quot;]~tg~" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[Password]&quot; the value &quot;%I22santan%&quot;"/>
+<actionParameter data="&quot;[Password]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;%I22santan%&quot;" dataSource="EncryptedValue"/>
+</cucumber-step>
+<cucumber-step actionName="addNewWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I wait for &quot;2&quot; seconds"/>
+<actionParameter data="&quot;2&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="Xpath=//*[@id=&quot;root-tplSeguridad-IFooter-forEachButtons-0-boton&quot;]" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[Next]&quot; button"/>
+<actionParameter data="&quot;[Next]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+<cucumber-step actionName="addNewWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I wait for &quot;1&quot; seconds"/>
+<actionParameter data="&quot;1&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="validateElementWithText" additionalInfo="~tg~" category="ValidationCategory" stepType="And">
+<focus-ctd-template text="&quot;[DynamicPwdLogin]&quot; should have text as &quot;Contraseña Dinamica&quot;"/>
+<actionParameter data="&quot;[DynamicPwdLogin]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;Contraseña Dinamica&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="populateTextField" additionalInfo="~tg~" category="InputTypeCategory" stepType="And">
+<focus-ctd-template text="I enter into input field &quot;[DynamicPassword]&quot; the value &quot;01023450&quot;"/>
+<actionParameter data="&quot;[DynamicPassword]&quot;" dataSource="UIControl"/>
+<actionParameter data="&quot;01023450&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="addNewWaitSeconds" additionalInfo="" category="CommonInputTypeCategory" stepType="And">
+<focus-ctd-template text="I wait for &quot;2&quot; seconds"/>
+<actionParameter data="&quot;2&quot;" dataSource="Literal"/>
+</cucumber-step>
+<cucumber-step actionName="clickButton" additionalInfo="" category="ElementClickCategory" stepType="And">
+<focus-ctd-template text="I click on &quot;[Next]&quot; button"/>
+<actionParameter data="&quot;[Next]&quot;" dataSource="UIControl"/>
+</cucumber-step>
+</focus-ctd-cucumber-steps-template>
+</focus-ctd-trigger>
+</focus-ctd-decoration>
 <focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
-<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="false"/>
 <focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
 <focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
-<defaultParentDetails parentDetailsApplicationName="Sample" parentDetailsFunctionality="Sample" parentDetailsModel="Bet-Test-Case-004.model" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="Sample" parentDetailsTenantId="Sample" parentDetailsUsername="saed.galaviz"/>
+<defaultParentDetails parentDetailsApplicationName="Sample" parentDetailsFunctionality="Sample" parentDetailsModel="Bet-Test-Case-004.model" parentDetailsModelTag="@Sample @0.2 @Sample_Sample @BET" parentDetailsPortfolio="Sample" parentDetailsTenantId="Sample" parentDetailsUsername="saed.galaviz"/>
 <deactivates/>
 <attrs-to-delete/>
-<pool_comments/>
+<pool_comments>
+<pool_comment key="ce2b43b0-1b7a-4925-9cd1-1a3f082e6ee3" value="{&quot;name&quot;:&quot;Password&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="24e26593-fb55-4632-8a3f-dbea6c760b76" value="{&quot;name&quot;:&quot;Usuario&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="1438e0e4-f6d0-4935-be45-9c19bfbad743" value="{&quot;name&quot;:&quot;ValidFechaInicial&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="4f4d2bf6-0322-4c10-bc12-7309d606d6be" value="{&quot;name&quot;:&quot;DynamicPwd&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+<pool_comment key="9d717130-c18d-4c80-8d1c-4f781328a445" value="{&quot;name&quot;:&quot;FinalDate&quot;,&quot;version&quot;:&quot;1&quot;}"/>
+</pool_comments>
 <db-dependencies/>
 <focus-ctd-model-sync>
 <focus-ctd-model-sync-mult/>
