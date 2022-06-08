@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE focus-model [
+]>
+<!--Beginner draft for the BET module--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@Sample @0.1 @Sample_Sample @BET">
+<model-identification-field name="Application Name" partOfTag="true" value="Sample"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="0.1"/>
+<model-identification-field name="Application Function" partOfTag="true" value="Sample_Sample"/>
+<model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
+<model-identification-field name="Created By" partOfTag="false" value="saed.galaviz@ibm.com"/>
+<model-identification-field name="Created Date and Time" partOfTag="false" value="07 Jun 2022 21:35:01"/>
+<model-identification-field name="Updated By" partOfTag="false" value="saed.galaviz@ibm.com"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="08 Jun 2022 15:36:02"/>
+<model-identification-field name="Application Sub Function" partOfTag="true" value="BET"/>
+<model-identification-field name="Test Stage" partOfTag="false" value=""/>
+<model-identification-field name="Criticality" partOfTag="false" value="minor"/>
+<model-identification-field name="Project" partOfTag="false" value=""/>
+<model-identification-field name="Epic" partOfTag="false" value=""/>
+<model-identification-field name="Feature" partOfTag="false" value=""/>
+<model-identification-field name="User Story" partOfTag="false" value=""/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
+</model-identification>
+<attribute attr_class="NONE" dependencies="false" description="usuario que quiere hacer la consulta de datos" group="" iotype="NEITHER" name="Usuario" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="The valid user value" name="ValidId" neg-value="false" weight="1"/>
+<value description="An incorrect user value" name="InvalidId" neg-value="true" weight="2"/>
+<value description="No value in user field" name="BlankId" neg-value="true" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="Contraseña definida por el usuario" group="" iotype="NEITHER" name="Password" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Valor correcto que concorda con el usuario" name="ValidPwd" neg-value="false" weight="1"/>
+<value description="Valor incorrecto que concuerde con el usuario" name="InvalidPwd" neg-value="true" weight="2"/>
+<value description="Campo de contraseña sin valor" name="BlankPwd" neg-value="true" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="Contraseña dinamica para 2FA" group="" iotype="NEITHER" name="DynamicPwd" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Valor valido de DynPwd" name="ValidDynPwd" neg-value="false" weight="1"/>
+<value description="valor invalido para DynPwd" name="InvalidDynPwd" neg-value="true" weight="1"/>
+<value description="campo de DynPwd sin valor" name="BlankDynPwd" neg-value="true" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="fecha valida inicial" group="" iotype="NEITHER" name="ValidFechaInicial" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="una fecha valida para rango incial" name="ValidInitialDate" neg-value="false" weight="1"/>
+<value description="una fecha invalida para rango inicial" name="InvalidInitialDate" neg-value="true" weight="1"/>
+</attribute>
+<attribute attr_class="NONE" dependencies="false" description="fecha final" group="" iotype="NEITHER" name="FinalDate" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="valor valido de fecha final" name="ValidFinalDate" neg-value="false" weight="1"/>
+<value description="valor invalido para fecha final" name="InvalidFinalDate" neg-value="true" weight="1"/>
+</attribute>
+<restriction expression="!(Usuario.equals(&quot;ValidId&quot;) &amp;&amp; Password.equals(&quot;ValidPwd&quot;) &amp;&amp; DynamicPwd.equals(&quot;ValidDynPwd&quot;)) || ValidFechaInicial.equals(&quot;ValidInitialDate&quot;) &amp;&amp; FinalDate.equals(&quot;ValidFinalDate&quot;)" group="" groupedExpression="!(Usuario.equals(&quot;ValidId&quot;) &amp;&amp; Password.equals(&quot;ValidPwd&quot;) &amp;&amp; DynamicPwd.equals(&quot;ValidDynPwd&quot;)) || ValidFechaInicial.equals(&quot;ValidInitialDate&quot;) &amp;&amp; FinalDate.equals(&quot;ValidFinalDate&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<if-expr is_or="false">
+<focus-ctd-cond attribute="Usuario" operation="Equals">
+<focus-ctd-cond-val value="ValidId"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="Password" operation="Equals">
+<focus-ctd-cond-val value="ValidPwd"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="DynamicPwd" operation="Equals">
+<focus-ctd-cond-val value="ValidDynPwd"/>
+</focus-ctd-cond>
+</if-expr>
+<then-expr is_or="false">
+<focus-ctd-cond attribute="ValidFechaInicial" operation="Equals">
+<focus-ctd-cond-val value="ValidInitialDate"/>
+</focus-ctd-cond>
+<focus-ctd-cond attribute="FinalDate" operation="Equals">
+<focus-ctd-cond-val value="ValidFinalDate"/>
+</focus-ctd-cond>
+</then-expr>
+</restriction>
+<negative-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="ValidFechaInicial" value="InvalidInitialDate"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="FinalDate" value="InvalidFinalDate"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Password" value="BlankPwd"/>
+</negative-combination>
+<negative-combination>
+<attr-value attribute="Password" value="InvalidPwd"/>
+</negative-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="BlankId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="InvalidId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="BlankPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="InvalidPwd"/>
+<attr-value attribute="DynamicPwd" value="ValidDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="BlankDynPwd"/>
+</na-mapping-combination>
+<na-mapping-combination>
+<attr-value attribute="Usuario" value="ValidId"/>
+<attr-value attribute="Password" value="ValidPwd"/>
+<attr-value attribute="DynamicPwd" value="InvalidDynPwd"/>
+</na-mapping-combination>
+<coverage-reqs-sets defaultCoverageRequirementsSet="Sucessfull login">
+<coverage-reqs-set description="Validation of a sucessful login" name="Sucessfull login">
+<coverage-req>
+<attribute name="Usuario"/>
+<attribute name="Password"/>
+<attribute name="DynamicPwd"/>
+<coverage-goal coverage-goal-val="3"/>
+</coverage-req>
+</coverage-reqs-set>
+</coverage-reqs-sets>
+<neg-coverage-reqs-sets defaultCoverageRequirementsSet="SingleNegativeCoverageRequirementsSet" isAutoNegCoverageRequirements="true">
+<coverage-reqs-set description="" name="SingleNegativeCoverageRequirementsSet">
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Usuario"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="ValidFechaInicial"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="DynamicPwd"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="FinalDate"/>
+</negative-attribute-combination>
+</coverage-req>
+<coverage-req>
+<coverage-goal coverage-goal-val="1"/>
+<negative-attribute-combination>
+<attribute name="Password"/>
+</negative-attribute-combination>
+</coverage-req>
+</coverage-reqs-set>
+</neg-coverage-reqs-sets>
+<focus-ctd-decoration decorationName="DefaultTestCaseNameDecoration" decorationType="testCaseName" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultFreeStyleDecoration" decorationType="freeStyle" isActiveDecoration="true"/>
+<focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
+<focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="Sample" parentDetailsFunctionality="Sample" parentDetailsModel="Bet-Test-Case-004.model" parentDetailsModelTag="@Sample @0.1 @Sample_Sample @BET" parentDetailsPortfolio="Sample" parentDetailsTenantId="Sample" parentDetailsUsername="saed.galaviz"/>
+<deactivates/>
+<attrs-to-delete/>
+<pool_comments/>
+<db-dependencies/>
+<focus-ctd-model-sync>
+<focus-ctd-model-sync-mult/>
+<focus-ctd-model-sync-na/>
+</focus-ctd-model-sync>
+</focus-model>
