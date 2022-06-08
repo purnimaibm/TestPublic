@@ -1,4 +1,4 @@
-﻿@Sample @0.2 @Sample_Sample @BET
+@Sample @0.2 @Sample_Sample @BET
 Feature: Initial triggers
 Scenario: goodpath
 Given I navigate to "https://betlogon.pre.mx.corp/LOGBET_ENS/ChannelDriver.ssobto?dse_operationName=login&dse_parentContextName=&dse_processorState=initial&dse_nextEventName=start&nowCheckingCookies=1522335868441"
