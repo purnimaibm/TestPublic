@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE focus-model [
 ]>
-<!--Demonstration application for shopping and shipping restrictions added--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" inputOutput="false" manual="true">
-<model-identification modelTag="@Sample @2 @Sample_Sample @sub">
+<!--Demonstration application for shopping and shipping restrictions added--><focus-model auxDataFilesFolder="" classifyAttributesEnabled="false" frea_ai_smart_comment="" inputOutput="false" manual="true">
+<model-identification modelTag="@Sample @3 @Sample_Sample @sub">
 <model-identification-field name="Application Name" partOfTag="true" value="Sample"/>
-<model-identification-field name="Application code version #" partOfTag="true" value="2"/>
+<model-identification-field name="Application code version #" partOfTag="true" value="3"/>
 <model-identification-field name="Application Function" partOfTag="true" value="Sample_Sample"/>
 <model-identification-field name="Updated Reason" partOfTag="false" value="New Model"/>
 <model-identification-field name="Created By" partOfTag="false" value="YONIT@il.ibm.com"/>
 <model-identification-field name="Created Date and Time" partOfTag="false" value="25 Jun 2017 02:40:21"/>
-<model-identification-field name="Updated By" partOfTag="false" value="monikaks@in.ibm.com"/>
-<model-identification-field name="Updated Date and Time" partOfTag="false" value="22 Dec 2020 10:32:44"/>
+<model-identification-field name="Updated By" partOfTag="false" value="Devapriya.Pal@ibm.com"/>
+<model-identification-field name="Updated Date and Time" partOfTag="false" value="23 Aug 2022 13:05:46"/>
 <model-identification-field name="Application Sub Function" partOfTag="true" value="sub"/>
 <model-identification-field name="Test Stage" partOfTag="false" value=""/>
 <model-identification-field name="Criticality" partOfTag="false" value=""/>
@@ -18,54 +18,54 @@
 <model-identification-field name="Epic" partOfTag="false" value=""/>
 <model-identification-field name="Feature" partOfTag="false" value=""/>
 <model-identification-field name="User Story" partOfTag="false" value=""/>
-<model-identification-field name="Use attribute pool" partOfTag="false" value="false"/>
+<model-identification-field name="Use attribute pool" partOfTag="false" value="true"/>
 </model-identification>
-<attribute attr_class="NONE" dependencies="false" description="Combines two concepts: whether an item is valid, and whether a valid item is in stock." group="" iotype="NEITHER" name="ItemStockStatus" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-<value description="A valid item that is in stock" name="validInStock" weight="1"/>
-<value description="A valid item that is not in stock." name="validOutOfStock" weight="1"/>
-<value description="Item is not valid." name="invalid" weight="1"/>
+<attribute attr_class="NONE" dependencies="false" description="Combines two concepts: whether an item is valid, and whether a valid item is in stock." group="" iotype="NEITHER" name="ItemStockStatus" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="A valid item that is in stock" name="validInStock" neg-value="false" weight="1"/>
+<value description="A valid item that is not in stock." name="validOutOfStock" neg-value="false" weight="1"/>
+<value description="Item is not valid." name="invalid" neg-value="true" weight="1"/>
 <requirement ID="R1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="True if item is subject to export regulations" group="" iotype="NEITHER" name="ItemIsExportControlled" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="BOOLEAN">
-<value name="true" weight="1"/>
-<value name="false" weight="1"/>
+<attribute attr_class="NONE" dependencies="false" description="True if item is subject to export regulations" group="" iotype="NEITHER" name="ItemIsExportControlled" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="BOOLEAN">
+<value name="true" neg-value="false" weight="1"/>
+<value name="false" neg-value="false" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="Whether the item is shipping to a foreign country. Using a string instead of a boolean because I expect the values will change." group="" iotype="NEITHER" name="OrderShippingDestination" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-<value description="The order is shipping domestically." name="domestic" weight="1"/>
-<value description="The order is shipping to another country" name="foreign" weight="1"/>
+<attribute attr_class="NONE" dependencies="false" description="Whether the item is shipping to a foreign country. Using a string instead of a boolean because I expect the values will change." group="" iotype="NEITHER" name="OrderShippingDestination" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="The order is shipping domestically." name="domestic" neg-value="false" weight="1"/>
+<value description="The order is shipping to another country" name="foreign" neg-value="false" weight="1"/>
 <requirement ID="R2"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="Which pricing scheme is used for this order." group="" iotype="NEITHER" name="OrderPricingScheme" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-<value description="Use pricing scheme 1." name="scheme1" weight="1">
+<attribute attr_class="NONE" dependencies="false" description="Which pricing scheme is used for this order." group="" iotype="NEITHER" name="OrderPricingScheme" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Use pricing scheme 1." name="scheme1" neg-value="false" weight="1">
 <requirement ID="R4"/>
 </value>
-<value description="Use pricing scheme 2." name="scheme2" weight="1">
+<value description="Use pricing scheme 2." name="scheme2" neg-value="false" weight="1">
 <requirement ID="R5"/>
 </value>
-<value description="Use pricing scheme 3." name="scheme3" weight="1">
+<value description="Use pricing scheme 3." name="scheme3" neg-value="false" weight="1">
 <requirement ID="R6"/>
 </value>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="What is the desired delivery timeframe?" group="" iotype="NEITHER" name="OrderDeliveryTimeframe" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-<value description="Expedited delivery." name="immediate" weight="1"/>
-<value description="Delivery within one week." name="oneWeek" weight="1"/>
-<value description="Delivery within one month." name="oneMonth" weight="1"/>
+<attribute attr_class="NONE" dependencies="false" description="What is the desired delivery timeframe?" group="" iotype="NEITHER" name="OrderDeliveryTimeframe" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Expedited delivery." name="immediate" neg-value="false" weight="1"/>
+<value description="Delivery within one week." name="oneWeek" neg-value="false" weight="1"/>
+<value description="Delivery within one month." name="oneMonth" neg-value="false" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="User's selection for means of shipping." group="" iotype="NEITHER" name="OrderShipping" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-<value description="Ship by a ground carrier." name="ground" weight="1"/>
-<value description="Ship by sea carrier." name="sea" weight="1"/>
-<value description="Ship by air carrier." name="air" weight="1"/>
+<attribute attr_class="NONE" dependencies="false" description="User's selection for means of shipping." group="" iotype="NEITHER" name="OrderShipping" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Ship by a ground carrier." name="ground" neg-value="false" weight="1"/>
+<value description="Ship by sea carrier." name="sea" neg-value="false" weight="1"/>
+<value description="Ship by air carrier." name="air" neg-value="false" weight="1"/>
 </attribute>
-<attribute attr_class="NONE" dependencies="false" description="Result of customer credit check." group="" iotype="NEITHER" name="CustomerCreditStatus" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @2 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
-<value description="Purchase payment was approved." name="approved" weight="1"/>
-<value description="Purchase payment was denied." name="denied" weight="1"/>
-<value description="Error in payment validation is treated as denial." name="unknown" weight="1"/>
+<attribute attr_class="NONE" dependencies="false" description="Result of customer credit check." group="" iotype="NEITHER" name="CustomerCreditStatus" parentDetailsApplicationName="" parentDetailsFunctionality="" parentDetailsModel="" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="" parentDetailsTenantId="" parentDetailsUsername="" poolId="" revision="" type="STRING">
+<value description="Purchase payment was approved." name="approved" neg-value="false" weight="1"/>
+<value description="Purchase payment was denied." name="denied" neg-value="true" weight="1"/>
+<value description="Error in payment validation is treated as denial." name="unknown" neg-value="true" weight="1"/>
 </attribute>
-<restriction expression="OrderDeliveryTimeframe.equals(&quot;oneWeek&quot;) &amp;&amp; OrderShipping.equals(&quot;sea&quot;)" group="" isActive="true" isAutoGenerated="false" name="01 Mar 12 08:02:53 0" type="Exclusion">
+<restriction expression="OrderDeliveryTimeframe.equals(&quot;oneWeek&quot;) &amp;&amp; OrderShipping.equals(&quot;sea&quot;)" group="" groupedExpression="OrderDeliveryTimeframe.equals(&quot;oneWeek&quot;) &amp;&amp; OrderShipping.equals(&quot;sea&quot;)" isActive="true" isAutoGenerated="false" name="01 Mar 12 08:02:53 0" type="Exclusion">
 <requirement ID="R3"/>
 </restriction>
-<restriction expression="OrderDeliveryTimeframe.equals(&quot;oneMonth&quot;) &amp;&amp; OrderShipping.equals(&quot;air&quot;)" group="" isActive="true" isAutoGenerated="false" name="01 Mar 12 08:03:01 0" type="Exclusion"/>
-<restriction expression="!(OrderDeliveryTimeframe.equals(&quot;immediate&quot;)) || OrderShipping.equals(&quot;air&quot;)" group="" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
+<restriction expression="OrderDeliveryTimeframe.equals(&quot;oneMonth&quot;) &amp;&amp; OrderShipping.equals(&quot;air&quot;)" group="" groupedExpression="OrderDeliveryTimeframe.equals(&quot;oneMonth&quot;) &amp;&amp; OrderShipping.equals(&quot;air&quot;)" isActive="true" isAutoGenerated="false" name="01 Mar 12 08:03:01 0" type="Exclusion"/>
+<restriction expression="!(OrderDeliveryTimeframe.equals(&quot;immediate&quot;)) || OrderShipping.equals(&quot;air&quot;)" group="" groupedExpression="!(OrderDeliveryTimeframe.equals(&quot;immediate&quot;)) || OrderShipping.equals(&quot;air&quot;)" iff="false" isActive="true" isAutoGenerated="false" name="" type="If-Then">
 <if-expr is_or="false">
 <focus-ctd-cond attribute="OrderDeliveryTimeframe" operation="Equals">
 <focus-ctd-cond-val value="immediate"/>
@@ -184,7 +184,11 @@
 </focus-ctd-decoration>
 <focus-ctd-decoration decorationName="DefaultCucumberDecoration" decorationType="cucumberDecoration" isActiveDecoration="false"/>
 <focus-ctd-decoration decorationName="DefaultStructuredDecoration" decorationType="structuredDecoration" isActiveDecoration="false"/>
+<defaultParentDetails parentDetailsApplicationName="Sample" parentDetailsFunctionality="Sample" parentDetailsModel="ShoppingShipping_with_requirement_ids.model" parentDetailsModelTag="@Sample @3 @Sample_Sample @sub" parentDetailsPortfolio="Sample" parentDetailsTenantId="Sample" parentDetailsUsername="Devapriya.Pal"/>
+<deactivates/>
 <attrs-to-delete/>
+<pool_comments/>
+<db-dependencies/>
 <focus-ctd-model-sync>
 <focus-ctd-model-sync-mult/>
 <focus-ctd-model-sync-na/>
